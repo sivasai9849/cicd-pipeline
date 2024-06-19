@@ -54,4 +54,4 @@ jobs:
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
         run: |
-          railway up -p a76ae5b8-de10-4b6e-9a6a-ddfec6a93782 --deployement-token $RAILWAY_TOKEN --name production
+          railway up a76ae5b8-de10-4b6e-9a6a-ddfec6a93782 --deployment-token $RAILWAY_TOKEN --name production

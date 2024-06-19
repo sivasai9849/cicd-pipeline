@@ -48,7 +48,9 @@ jobs:
         run: docker push sivasai9849/cicd-pipeline:${{ github.sha }}
 
       - name: Install Railway CLI
-        uses: railwayapp/cli@v0.1.0
+        run: |
+          curl -sSL https://railway.up/cli.sh | sh
+          echo "$HOME/.railway/bin" >> $GITHUB_PATH
 
       - name: Deploy to Railway 
         env:

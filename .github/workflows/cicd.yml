@@ -47,6 +47,9 @@ jobs:
       - name: Push Docker Image
         run: docker push sivasai9849/cicd-pipeline:${{ github.sha }}
 
+      - name: Install Railway CLI
+        uses: railwayapp/cli@v0.1.0
+
       - name: Deploy to Railway 
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
